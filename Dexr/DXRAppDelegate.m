@@ -7,11 +7,16 @@
 //
 
 #import "DXRAppDelegate.h"
+#import "DXREnvironment.h"
 
 @implementation DXRAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    DXREnvironment *env = [DXREnvironment sharedInstance];
+    NSLog(@"Dexr environment is %@", [env envName]);
+    NSLog(@"API base URL is %@", [[env baseUrl] absoluteString]);
+
     return YES;
 }
 

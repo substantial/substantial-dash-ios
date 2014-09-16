@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "58B6E41117E9402C9FD40339"
+               BlueprintIdentifier = "94B9BC4230A145179AC6BEE8"
                BuildableName = "libPods-Dexr-MZFayeClient.a"
                BlueprintName = "Pods-Dexr-MZFayeClient"
                ReferencedContainer = "container:Pods.xcodeproj">

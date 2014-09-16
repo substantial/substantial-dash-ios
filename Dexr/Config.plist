@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>test</key>
+	<dict>
+		<key>baseUrl</key>
+		<string>http://example.org/bayeux</string>
+	</dict>
+	<key>development</key>
+	<dict>
+		<key>baseUrl</key>
+		<string>http://0.0.0.0:8001/bayeux</string>
+	</dict>
+	<key>production</key>
+	<dict>
+		<key>baseUrl</key>
+		<string>http://dash.substantial.com/bayeux</string>
+	</dict>
+</dict>
+</plist>

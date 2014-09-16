@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "58556FD036494228BD4AAC78"
+               BlueprintIdentifier = "0231EC7227F14E8284CCA786"
                BuildableName = "libPods-Dexr-Base64.a"
                BlueprintName = "Pods-Dexr-Base64"
                ReferencedContainer = "container:Pods.xcodeproj">
