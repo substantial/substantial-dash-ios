@@ -8,7 +8,6 @@ describe(@"DXREnvironment", ^{
 
     beforeEach(^{
         environment = [[DXREnvironment alloc] initWithConfig:@"Config"];
-        NSLog(@"hey");
     });
 
     describe(@"envName", ^{
@@ -21,7 +20,7 @@ describe(@"DXREnvironment", ^{
 
     describe(@"baseUrl", ^{
         it(@"should return the base url", ^{
-            NSURL *expectedUrl = [NSURL URLWithString:@"http://example.org/bayeux"];
+            NSURL *expectedUrl = [NSURL URLWithString:@"http://example.org"];
             [[[environment baseUrl] should] equal:expectedUrl];
         });
     });

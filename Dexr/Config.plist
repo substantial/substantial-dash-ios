@@ -5,17 +5,17 @@
 	<key>test</key>
 	<dict>
 		<key>baseUrl</key>
-		<string>http://example.org/bayeux</string>
+		<string>http://example.org</string>
 	</dict>
 	<key>development</key>
 	<dict>
 		<key>baseUrl</key>
-		<string>http://0.0.0.0:8001/bayeux</string>
+		<string>http://0.0.0.0:8001</string>
 	</dict>
 	<key>production</key>
 	<dict>
 		<key>baseUrl</key>
-		<string>http://dash.substantial.com/bayeux</string>
+		<string>http://dash.substantial.com</string>
 	</dict>
 </dict>
 </plist>

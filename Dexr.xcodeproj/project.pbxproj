@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		41163EE319C89EC40082261C /* DXRLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41163EE219C89EC40082261C /* DXRLoginViewController.m */; };
 		412B5CF819C7B4940090B3ED /* DXREnvironment.m in Sources */ = {isa = PBXBuildFile; fileRef = 412B5CF719C7B4940090B3ED /* DXREnvironment.m */; };
 		412B5CFA19C7B52F0090B3ED /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 412B5CF919C7B52F0090B3ED /* Config.plist */; };
 		412B5CFD19C7C2C50090B3ED /* DXREnvironmentSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 412B5CFC19C7C2C50090B3ED /* DXREnvironmentSpec.m */; };
@@ -40,6 +41,8 @@
 /* Begin PBXFileReference section */
 		058A148293014835BA793F59 /* libPods-DexrTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DexrTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		137F0A4E7AA4476CA98DFB95 /* Pods-Dexr.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dexr.xcconfig"; path = "Pods/Pods-Dexr.xcconfig"; sourceTree = "<group>"; };
+		41163EE119C89EC40082261C /* DXRLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DXRLoginViewController.h; path = Controllers/DXRLoginViewController.h; sourceTree = "<group>"; };
+		41163EE219C89EC40082261C /* DXRLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DXRLoginViewController.m; path = Controllers/DXRLoginViewController.m; sourceTree = "<group>"; };
 		412B5CF619C7B4940090B3ED /* DXREnvironment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXREnvironment.h; sourceTree = "<group>"; };
 		412B5CF719C7B4940090B3ED /* DXREnvironment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXREnvironment.m; sourceTree = "<group>"; };
 		412B5CF919C7B52F0090B3ED /* Config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
@@ -98,6 +101,8 @@
 			children = (
 				418A31A719BE06A200E9D2E1 /* DXRRootViewController.h */,
 				418A31A819BE06A200E9D2E1 /* DXRRootViewController.m */,
+				41163EE119C89EC40082261C /* DXRLoginViewController.h */,
+				41163EE219C89EC40082261C /* DXRLoginViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -376,6 +381,7 @@
 				418A316119BBE89800E9D2E1 /* main.m in Sources */,
 				418A31A919BE06A200E9D2E1 /* DXRRootViewController.m in Sources */,
 				412B5CF819C7B4940090B3ED /* DXREnvironment.m in Sources */,
+				41163EE319C89EC40082261C /* DXRLoginViewController.m in Sources */,
 				418A316519BBE89800E9D2E1 /* DXRAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
