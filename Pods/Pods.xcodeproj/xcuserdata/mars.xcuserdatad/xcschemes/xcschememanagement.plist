@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-Dexr-NSURL+QueryDictionary.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Dexr-SocketRocket.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,32 +42,37 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0231EC7227F14E8284CCA786</key>
+		<key>150373C0A3FA4C18B3C6F289</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>25EEA7D2F8BE4EB8A8229C53</key>
+		<key>5122252754324CE2AECCC8F7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>338679EBB7414C4E80A704CA</key>
+		<key>66061DB843DD4B1BAD478D54</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>82B82B9DA8FE4D68B8D796A5</key>
+		<key>6FFBD3BDCF9F4D0B89FE15A3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>94B9BC4230A145179AC6BEE8</key>
+		<key>C9ECF9588A6949F5B542617E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>EC97A86287FD492685E1D3EE</key>
+		<key>E39BFDB7EC37422EA152577B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E4EB635422CB423B9B1E901B</key>
 		<dict>
 			<key>primary</key>
 			<true/>

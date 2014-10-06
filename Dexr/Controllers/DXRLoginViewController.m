@@ -9,6 +9,8 @@
 #import "DXRLoginViewController.h"
 #import "DXREnvironment.h"
 
+static NSString *refererIdentifier = @"/-client/ios/login";
+
 @interface DXRLoginViewController ()
 @property (strong, nonatomic) IBOutlet UIWebView *webView;
 @end
@@ -26,18 +28,7 @@
 {
     [super viewDidAppear:animated];
 
-    DXREnvironment *env = [DXREnvironment sharedInstance];
-    NSString *baseUrlString = [[env baseUrl] absoluteString];
-    NSString *urlString =  [NSString stringWithFormat:@"%@/auth/google_apps/init", baseUrlString];
-
-    NSURL *loginUrl = [NSURL URLWithString:urlString];
-    NSMutableURLRequest *loginRequest = [NSMutableURLRequest requestWithURL:loginUrl];
-
-    NSString *referer =  [NSString stringWithFormat:@"%@/-client/ios/login", baseUrlString];
-    [loginRequest addValue:referer forHTTPHeaderField:@"Referer"];
-
-    NSLog(@"Initiating authentication...");
-    [self.webView loadRequest:loginRequest];
+    [self loadWebViewLogin];
 }
 
 - (void)didReceiveMemoryWarning
@@ -48,26 +39,28 @@
 
 #pragma mark - UIWebViewDelegate
 
-- (void)webViewDidStartLoad:(UIWebView *)webView
-{
-    NSLog(@"webViewDidStartLoad");
-}
-
-- (void)webViewDidFinishLoad:(UIWebView *)webView
-{
-    NSLog(@"webViewDidFinishLoad");
-}
+//- (void)webViewDidStartLoad:(UIWebView *)webView
+//{
+//    NSURL *requestedUrl = [webView.request mainDocumentURL];
+//    NSLog(@"webViewDidStartLoad: %@", requestedUrl);
+//}
+//
+//- (void)webViewDidFinishLoad:(UIWebView *)webView
+//{
+//    NSLog(@"webViewDidFinishLoad");
+//}
 
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
 {
-    NSLog(@"webView:shouldStartLoadWithRequest:navigationType");
-    return YES;
+    NSURL *requestURL = [request URL];
+    BOOL didLogin = [self detectSuccessfulLoginFromRedirectURL:requestURL];
+    return !didLogin;
 }
 
-- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
-{
-    NSLog(@"didFailLoadWithError: %@", error);
-}
+//- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
+//{
+//    NSLog(@"didFailLoadWithError: %@", error);
+//}
 
 /*
 #pragma mark - Navigation
@@ -81,6 +74,45 @@
 */
 
 #pragma mark - private
+
+- (void)loadWebViewLogin
+{
+    DXREnvironment *env = [DXREnvironment sharedInstance];
+    NSString *baseUrlString = [[env baseUrl] absoluteString];
+    NSString *urlString =  [NSString stringWithFormat:@"%@/auth/google_apps/init", baseUrlString];
+
+    NSURL *loginUrl = [NSURL URLWithString:urlString];
+    NSMutableURLRequest *loginRequest = [NSMutableURLRequest requestWithURL:loginUrl];
+
+    // Fake referrer used to receive redirect query params.
+    NSString *referer =  [NSString stringWithFormat:@"%@%@", baseUrlString, refererIdentifier];
+    [loginRequest addValue:referer forHTTPHeaderField:@"Referer"];
+
+    NSLog(@"Initiating authentication...");
+    [self.webView loadRequest:loginRequest];
+}
+
+- (BOOL)detectSuccessfulLoginFromRedirectURL:(NSURL *)redirectURL
+{
+    NSString *urlString = [redirectURL absoluteString];
+    NSLog(@"detectSuccessfulLoginFromRedirectURL:%@", urlString);
+
+    if ([urlString containsString:refererIdentifier]) {
+        NSDictionary *queryParams = [redirectURL uq_queryDictionary];
+        self.apiKey = [self decodeQuerystringParam:queryParams[@"api_key"]];
+        self.userName = [self decodeQuerystringParam:queryParams[@"user_name"]];
+        NSLog(@"user_name => %@, api_key => %@", self.userName, self.apiKey);
+        return YES;
+    } else {
+        return NO;
+    }
+}
+
+- (NSString *)decodeQuerystringParam:(NSString *)param
+{
+    return [[param stringByReplacingOccurrencesOfString:@"+"
+                                      withString:@"%20"]  stringByRemovingPercentEncoding];
+}
 
 - (void)dealloc
 {

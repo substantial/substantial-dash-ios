@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NSURL+QueryDictionary.h"
 
 @interface DXRLoginViewController : UIViewController <UIWebViewDelegate>
-
+@property (strong, nonatomic) NSString *apiKey;
+@property (strong, nonatomic) NSString *userName;
 @end

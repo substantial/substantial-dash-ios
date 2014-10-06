@@ -4,17 +4,20 @@ PODS:
   - MZFayeClient (1.0.0):
     - Base64 (~> 1.0.1)
     - SocketRocket (~> 0.3.1-beta2)
+  - NSURL+QueryDictionary (1.0.3)
   - SocketRocket (0.3.1-beta2)
 
 DEPENDENCIES:
   - Kiwi
   - MZFayeClient
+  - NSURL+QueryDictionary
   - SocketRocket
 
 SPEC CHECKSUMS:
   Base64: c6d74f31f150543b246a07e180ba813c88e59311
   Kiwi: 54bece5b35564d9b8e03c608d926f1a22fcfc589
   MZFayeClient: 0db6ba1b0408ff4e26f1bbe31d06ee6934f036b6
+  NSURL+QueryDictionary: 1ad81be60c10e3f4d80c5c4beb7125de96aaec5e
   SocketRocket: 79a68ae186063c65e1fe6f638b1ae2927aa5f304
 
 COCOAPODS: 0.33.1
