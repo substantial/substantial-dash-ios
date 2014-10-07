@@ -18,4 +18,20 @@
     return instance;
 }
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        [self setupStreams];
+    }
+    return self;
+}
+
+#pragma mark - private
+
+- (void)setupStreams
+{
+    self.apiKeyChanged = RACObserve(self, apiKey);
+}
+
 @end
