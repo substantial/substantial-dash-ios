@@ -8,6 +8,7 @@
 
 #import "DXRLoginViewController.h"
 #import "DXREnvironment.h"
+#import "DXRLogin.h"
 
 static NSString *refererIdentifier = @"/-client/ios/login";
 
@@ -99,9 +100,10 @@ static NSString *refererIdentifier = @"/-client/ios/login";
 
     if ([urlString containsString:refererIdentifier]) {
         NSDictionary *queryParams = [redirectURL uq_queryDictionary];
-        self.apiKey = [self decodeQuerystringParam:queryParams[@"api_key"]];
-        self.userName = [self decodeQuerystringParam:queryParams[@"user_name"]];
-        NSLog(@"user_name => %@, api_key => %@", self.userName, self.apiKey);
+        DXRLogin *login = [DXRLogin instance];
+        login.apiKey = [self decodeQuerystringParam:queryParams[@"api_key"]];
+        login.userName = [self decodeQuerystringParam:queryParams[@"user_name"]];
+        NSLog(@"user_name => %@, api_key => %@", login.userName, login.apiKey);
         return YES;
     } else {
         return NO;
