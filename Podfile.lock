@@ -5,12 +5,20 @@ PODS:
     - Base64 (~> 1.0.1)
     - SocketRocket (~> 0.3.1-beta2)
   - NSURL+QueryDictionary (1.0.3)
+  - ReactiveCocoa (2.3.1):
+    - ReactiveCocoa/UI
+  - ReactiveCocoa/Core (2.3.1):
+    - ReactiveCocoa/no-arc
+  - ReactiveCocoa/no-arc (2.3.1)
+  - ReactiveCocoa/UI (2.3.1):
+    - ReactiveCocoa/Core
   - SocketRocket (0.3.1-beta2)
 
 DEPENDENCIES:
   - Kiwi
   - MZFayeClient
   - NSURL+QueryDictionary
+  - ReactiveCocoa
   - SocketRocket
 
 SPEC CHECKSUMS:
@@ -18,6 +26,7 @@ SPEC CHECKSUMS:
   Kiwi: 54bece5b35564d9b8e03c608d926f1a22fcfc589
   MZFayeClient: 0db6ba1b0408ff4e26f1bbe31d06ee6934f036b6
   NSURL+QueryDictionary: 1ad81be60c10e3f4d80c5c4beb7125de96aaec5e
+  ReactiveCocoa: dca75777b9d18990c8714a3a6f2149f29b4d1462
   SocketRocket: 79a68ae186063c65e1fe6f638b1ae2927aa5f304
 
 COCOAPODS: 0.33.1
