@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		29139A4E43534CF190BF1E2E /* libPods-Dexr.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BBFCCDC5AD546ECB0008F3C /* libPods-Dexr.a */; };
 		41163EE319C89EC40082261C /* DXRLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41163EE219C89EC40082261C /* DXRLoginViewController.m */; };
+		4122089D19E6E284002CE6F3 /* UIViewController+WebViewLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 4122089C19E6E284002CE6F3 /* UIViewController+WebViewLogin.m */; };
 		412B5CF819C7B4940090B3ED /* DXREnvironment.m in Sources */ = {isa = PBXBuildFile; fileRef = 412B5CF719C7B4940090B3ED /* DXREnvironment.m */; };
 		412B5CFA19C7B52F0090B3ED /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 412B5CF919C7B52F0090B3ED /* Config.plist */; };
 		412B5CFD19C7C2C50090B3ED /* DXREnvironmentSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 412B5CFC19C7C2C50090B3ED /* DXREnvironmentSpec.m */; };
@@ -46,6 +47,8 @@
 		137F0A4E7AA4476CA98DFB95 /* Pods-Dexr.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dexr.xcconfig"; path = "Pods/Pods-Dexr.xcconfig"; sourceTree = "<group>"; };
 		41163EE119C89EC40082261C /* DXRLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DXRLoginViewController.h; path = Controllers/DXRLoginViewController.h; sourceTree = "<group>"; };
 		41163EE219C89EC40082261C /* DXRLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DXRLoginViewController.m; path = Controllers/DXRLoginViewController.m; sourceTree = "<group>"; };
+		4122089B19E6E284002CE6F3 /* UIViewController+WebViewLogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+WebViewLogin.h"; path = "Extensions/UIViewController+WebViewLogin.h"; sourceTree = "<group>"; };
+		4122089C19E6E284002CE6F3 /* UIViewController+WebViewLogin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+WebViewLogin.m"; path = "Extensions/UIViewController+WebViewLogin.m"; sourceTree = "<group>"; };
 		412B5CF619C7B4940090B3ED /* DXREnvironment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXREnvironment.h; sourceTree = "<group>"; };
 		412B5CF719C7B4940090B3ED /* DXREnvironment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXREnvironment.m; sourceTree = "<group>"; };
 		412B5CF919C7B52F0090B3ED /* Config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
@@ -103,6 +106,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4122089E19E6E28D002CE6F3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4122089B19E6E284002CE6F3 /* UIViewController+WebViewLogin.h */,
+				4122089C19E6E284002CE6F3 /* UIViewController+WebViewLogin.m */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 		412B5CF319C7B4380090B3ED /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -181,6 +193,7 @@
 				418A318919BCF31700E9D2E1 /* Lib */,
 				412B5CF519C7B4620090B3ED /* Models */,
 				418A315B19BBE89800E9D2E1 /* Supporting Files */,
+				4122089E19E6E28D002CE6F3 /* Extensions */,
 			);
 			path = Dexr;
 			sourceTree = "<group>";
@@ -393,6 +406,7 @@
 				418A31A919BE06A200E9D2E1 /* DXRRootViewController.m in Sources */,
 				412B5CF819C7B4940090B3ED /* DXREnvironment.m in Sources */,
 				41163EE319C89EC40082261C /* DXRLoginViewController.m in Sources */,
+				4122089D19E6E284002CE6F3 /* UIViewController+WebViewLogin.m in Sources */,
 				418A316519BBE89800E9D2E1 /* DXRAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
