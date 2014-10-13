@@ -10,6 +10,14 @@ describe(@"DXREnvironment", ^{
         environment = [[DXREnvironment alloc] initWithConfig:@"Config"];
     });
 
+    describe(@"instance", ^{
+        it(@"returns a singleton", ^{
+            DXREnvironment *env1 = [DXREnvironment instance];
+            DXREnvironment *env2 = [DXREnvironment instance];
+            [[env1 should] equal:env2];
+        });
+    });
+
     describe(@"envName", ^{
         it(@"should return the current name of the environment", ^{
             NSString *expectedName = @"test";

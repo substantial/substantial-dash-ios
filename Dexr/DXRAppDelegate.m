@@ -14,7 +14,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    DXREnvironment *env = [DXREnvironment sharedInstance];
+    DXREnvironment *env = [DXREnvironment instance];
     NSLog(@"Dexr environment is %@", [env envName]);
     NSLog(@"API base URL is %@", [[env baseUrl] absoluteString]);
 

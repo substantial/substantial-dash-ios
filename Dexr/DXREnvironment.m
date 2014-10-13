@@ -5,7 +5,7 @@
 
 @implementation DXREnvironment
 
-+ (instancetype)sharedInstance
++ (instancetype)instance
 {
     static dispatch_once_t once;
     static DXREnvironment *instance;

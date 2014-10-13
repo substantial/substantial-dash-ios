@@ -1,7 +1,7 @@
 @interface DXREnvironment : NSObject
 
 @property (strong, nonatomic) NSDictionary *config;
-+ (instancetype)sharedInstance;
++ (instancetype)instance;
 - (id)initWithConfig:(NSString *)configFilename;
 - (NSString *)envName;
 - (NSURL *)baseUrl;

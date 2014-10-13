@@ -13,7 +13,7 @@
 
 - (void)loadLoginWithWebView:(UIWebView *)webView
 {
-    DXREnvironment *env = [DXREnvironment sharedInstance];
+    DXREnvironment *env = [DXREnvironment instance];
     NSString *baseUrlString = [[env baseUrl] absoluteString];
     NSString *urlString =  [NSString stringWithFormat:@"%@/auth/google_apps/init", baseUrlString];
 
