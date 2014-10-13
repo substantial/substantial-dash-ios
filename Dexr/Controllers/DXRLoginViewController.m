@@ -19,7 +19,9 @@
 {
     [super viewDidLoad];
 
+    self.webView = [[UIWebView alloc] initWithFrame:self.view.frame];
     self.webView.delegate = self;
+    [self.view addSubview:self.webView];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -76,6 +78,7 @@
 - (void)dealloc
 {
     self.webView.delegate = nil;
+    self.webView = nil;
 }
 
 @end

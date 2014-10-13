@@ -8,6 +8,7 @@
 
 #import "DXRAppDelegate.h"
 #import "DXREnvironment.h"
+#import "DXRRootViewController.h"
 
 @implementation DXRAppDelegate
 
@@ -16,6 +17,13 @@
     DXREnvironment *env = [DXREnvironment sharedInstance];
     NSLog(@"Dexr environment is %@", [env envName]);
     NSLog(@"API base URL is %@", [[env baseUrl] absoluteString]);
+
+    UIWindow *window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window = window;
+    UIViewController *rootViewController = [[DXRRootViewController alloc] init];
+    window.rootViewController = rootViewController;
+    [window addSubview:rootViewController.view];
+    [window makeKeyAndVisible];
 
     return YES;
 }

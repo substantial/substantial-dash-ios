@@ -27,7 +27,6 @@
 		418A316F19BBE89800E9D2E1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 418A315419BBE89800E9D2E1 /* Foundation.framework */; };
 		418A317019BBE89800E9D2E1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 418A315819BBE89800E9D2E1 /* UIKit.framework */; };
 		418A317819BBE89800E9D2E1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 418A317619BBE89800E9D2E1 /* InfoPlist.strings */; };
-		418A318419BBE93800E9D2E1 /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 418A318319BBE93800E9D2E1 /* iPhone.storyboard */; };
 		418A31A919BE06A200E9D2E1 /* DXRRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 418A31A819BE06A200E9D2E1 /* DXRRootViewController.m */; };
 		DFCE0167540C46809A3CD770 /* libPods-DexrTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 058A148293014835BA793F59 /* libPods-DexrTests.a */; };
 /* End PBXBuildFile section */
@@ -71,7 +70,6 @@
 		418A316D19BBE89800E9D2E1 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		418A317519BBE89800E9D2E1 /* DexrTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DexrTests-Info.plist"; sourceTree = "<group>"; };
 		418A317719BBE89800E9D2E1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		418A318319BBE93800E9D2E1 /* iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPhone.storyboard; sourceTree = "<group>"; };
 		418A318519BBEFC800E9D2E1 /* Gemfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Gemfile; sourceTree = "<group>"; };
 		418A318719BCF1BC00E9D2E1 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		418A31A719BE06A200E9D2E1 /* DXRRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DXRRootViewController.h; path = Controllers/DXRRootViewController.h; sourceTree = "<group>"; };
@@ -188,7 +186,6 @@
 				418A316319BBE89800E9D2E1 /* DXRAppDelegate.h */,
 				418A316419BBE89800E9D2E1 /* DXRAppDelegate.m */,
 				412B5CF319C7B4380090B3ED /* Controllers */,
-				418A318319BBE93800E9D2E1 /* iPhone.storyboard */,
 				418A316619BBE89800E9D2E1 /* Images.xcassets */,
 				418A318919BCF31700E9D2E1 /* Lib */,
 				412B5CF519C7B4620090B3ED /* Models */,
@@ -316,7 +313,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				418A315F19BBE89800E9D2E1 /* InfoPlist.strings in Resources */,
-				418A318419BBE93800E9D2E1 /* iPhone.storyboard in Resources */,
 				412B5CFA19C7B52F0090B3ED /* Config.plist in Resources */,
 				418A316719BBE89800E9D2E1 /* Images.xcassets in Resources */,
 			);
