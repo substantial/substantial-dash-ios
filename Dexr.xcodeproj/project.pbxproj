@@ -10,6 +10,9 @@
 		29139A4E43534CF190BF1E2E /* libPods-Dexr.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BBFCCDC5AD546ECB0008F3C /* libPods-Dexr.a */; };
 		41163EE319C89EC40082261C /* DXRLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41163EE219C89EC40082261C /* DXRLoginViewController.m */; };
 		4122089D19E6E284002CE6F3 /* UIViewController+WebViewLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 4122089C19E6E284002CE6F3 /* UIViewController+WebViewLogin.m */; };
+		412208A119EC453E002CE6F3 /* CABasicAnimation+NavigationAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 412208A019EC453E002CE6F3 /* CABasicAnimation+NavigationAnimation.m */; };
+		412208A719EC4F7A002CE6F3 /* DXRMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 412208A519EC4F7A002CE6F3 /* DXRMainViewController.m */; };
+		412208A819EC4F7A002CE6F3 /* DXRMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 412208A619EC4F7A002CE6F3 /* DXRMainViewController.xib */; };
 		412B5CF819C7B4940090B3ED /* DXREnvironment.m in Sources */ = {isa = PBXBuildFile; fileRef = 412B5CF719C7B4940090B3ED /* DXREnvironment.m */; };
 		412B5CFA19C7B52F0090B3ED /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 412B5CF919C7B52F0090B3ED /* Config.plist */; };
 		412B5CFD19C7C2C50090B3ED /* DXREnvironmentSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 412B5CFC19C7C2C50090B3ED /* DXREnvironmentSpec.m */; };
@@ -48,6 +51,11 @@
 		41163EE219C89EC40082261C /* DXRLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DXRLoginViewController.m; path = Controllers/DXRLoginViewController.m; sourceTree = "<group>"; };
 		4122089B19E6E284002CE6F3 /* UIViewController+WebViewLogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+WebViewLogin.h"; path = "Extensions/UIViewController+WebViewLogin.h"; sourceTree = "<group>"; };
 		4122089C19E6E284002CE6F3 /* UIViewController+WebViewLogin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+WebViewLogin.m"; path = "Extensions/UIViewController+WebViewLogin.m"; sourceTree = "<group>"; };
+		4122089F19EC453E002CE6F3 /* CABasicAnimation+NavigationAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "CABasicAnimation+NavigationAnimation.h"; path = "Extensions/CABasicAnimation+NavigationAnimation.h"; sourceTree = "<group>"; };
+		412208A019EC453E002CE6F3 /* CABasicAnimation+NavigationAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "CABasicAnimation+NavigationAnimation.m"; path = "Extensions/CABasicAnimation+NavigationAnimation.m"; sourceTree = "<group>"; };
+		412208A419EC4F7A002CE6F3 /* DXRMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DXRMainViewController.h; path = Controllers/DXRMainViewController.h; sourceTree = "<group>"; };
+		412208A519EC4F7A002CE6F3 /* DXRMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DXRMainViewController.m; path = Controllers/DXRMainViewController.m; sourceTree = "<group>"; };
+		412208A619EC4F7A002CE6F3 /* DXRMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DXRMainViewController.xib; path = Controllers/DXRMainViewController.xib; sourceTree = "<group>"; };
 		412B5CF619C7B4940090B3ED /* DXREnvironment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXREnvironment.h; sourceTree = "<group>"; };
 		412B5CF719C7B4940090B3ED /* DXREnvironment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXREnvironment.m; sourceTree = "<group>"; };
 		412B5CF919C7B52F0090B3ED /* Config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
@@ -109,6 +117,8 @@
 			children = (
 				4122089B19E6E284002CE6F3 /* UIViewController+WebViewLogin.h */,
 				4122089C19E6E284002CE6F3 /* UIViewController+WebViewLogin.m */,
+				4122089F19EC453E002CE6F3 /* CABasicAnimation+NavigationAnimation.h */,
+				412208A019EC453E002CE6F3 /* CABasicAnimation+NavigationAnimation.m */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -118,6 +128,9 @@
 			children = (
 				418A31A719BE06A200E9D2E1 /* DXRRootViewController.h */,
 				418A31A819BE06A200E9D2E1 /* DXRRootViewController.m */,
+				412208A419EC4F7A002CE6F3 /* DXRMainViewController.h */,
+				412208A519EC4F7A002CE6F3 /* DXRMainViewController.m */,
+				412208A619EC4F7A002CE6F3 /* DXRMainViewController.xib */,
 				41163EE119C89EC40082261C /* DXRLoginViewController.h */,
 				41163EE219C89EC40082261C /* DXRLoginViewController.m */,
 			);
@@ -313,6 +326,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				418A315F19BBE89800E9D2E1 /* InfoPlist.strings in Resources */,
+				412208A819EC4F7A002CE6F3 /* DXRMainViewController.xib in Resources */,
 				412B5CFA19C7B52F0090B3ED /* Config.plist in Resources */,
 				418A316719BBE89800E9D2E1 /* Images.xcassets in Resources */,
 			);
@@ -398,7 +412,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				4131C19519E3A1B600EAC321 /* DXRLogin.m in Sources */,
+				412208A719EC4F7A002CE6F3 /* DXRMainViewController.m in Sources */,
 				418A316119BBE89800E9D2E1 /* main.m in Sources */,
+				412208A119EC453E002CE6F3 /* CABasicAnimation+NavigationAnimation.m in Sources */,
 				418A31A919BE06A200E9D2E1 /* DXRRootViewController.m in Sources */,
 				412B5CF819C7B4940090B3ED /* DXREnvironment.m in Sources */,
 				41163EE319C89EC40082261C /* DXRLoginViewController.m in Sources */,

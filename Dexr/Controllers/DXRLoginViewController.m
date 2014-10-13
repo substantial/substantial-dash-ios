@@ -24,9 +24,9 @@
     [self.view addSubview:self.webView];
 }
 
-- (void)viewDidAppear:(BOOL)animated
+- (void)didMoveToParentViewController:(UIViewController *)parent
 {
-    [super viewDidAppear:animated];
+    [super didMoveToParentViewController:parent];
 
     [self loadLoginWithWebView:self.webView];
 }
@@ -53,7 +53,7 @@
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
 {
     NSURL *requestURL = [request URL];
-    BOOL didLogin = [self detectSuccessfulLoginFromRedirectURL:requestURL];
+    BOOL didLogin = [self detectSuccessfulLoginWithWebView:webView fromRedirectURL:requestURL];
     return !didLogin;
 }
 

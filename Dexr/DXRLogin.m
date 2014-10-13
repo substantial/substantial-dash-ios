@@ -27,11 +27,18 @@
     return self;
 }
 
+- (void)logout
+{
+    self.apiKey = nil;
+    self.userName = nil;
+}
+
 #pragma mark - private
 
 - (void)setupStreams
 {
     self.apiKeyChanged = RACObserve(self, apiKey);
+    self.userNameChanged = RACObserve(self, userName);
 }
 
 @end

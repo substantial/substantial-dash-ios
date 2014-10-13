@@ -54,6 +54,63 @@ describe(@"DXRLogin", ^{
         });
     });
 
+    describe(@"userNameChanged", ^{
+        __block DXRLogin *login;
+        __block NSString *signalledUserName;
+        __block BOOL userNameChangedSuccess;
+        __block NSError *userNameChangedError;
+
+        beforeEach(^{
+            login = [DXRLogin instance];
+        });
+
+        it(@"begins with nil", ^{
+            signalledUserName = [login.userNameChanged asynchronousFirstOrDefault:nil
+                                                                      success:&userNameChangedSuccess
+                                                                        error:&userNameChangedError];
+            [[signalledUserName should] beNil];
+            [[theValue(userNameChangedSuccess) should] beYes];
+            [[userNameChangedError should] beNil];
+        });
+
+        it(@"signals when the userName changes", ^{
+            login.userName = @"Mr. Flux";
+            signalledUserName = [login.userNameChanged asynchronousFirstOrDefault:nil
+                                                                      success:&userNameChangedSuccess
+                                                                        error:&userNameChangedError];
+            [[signalledUserName should] equal:@"Mr. Flux"];
+            [[theValue(userNameChangedSuccess) should] beYes];
+            [[userNameChangedError should] beNil];
+        });
+
+        it(@"signals when the userName becomes nil", ^{
+            login.userName = @"Mr. Flux";
+            login.userName = nil;
+            signalledUserName = [login.userNameChanged asynchronousFirstOrDefault:nil
+                                                                      success:&userNameChangedSuccess
+                                                                        error:&userNameChangedError];
+            [[signalledUserName should] beNil];
+            [[theValue(userNameChangedSuccess) should] beYes];
+            [[userNameChangedError should] beNil];
+        });
+    });
+
+    describe(@"logout", ^{
+        __block DXRLogin *login;
+
+        beforeEach(^{
+            login = [DXRLogin instance];
+            login.userName = @"Mr. Flux";
+            login.apiKey = @"firelit";
+        });
+
+        it(@"signals when the userName becomes nil", ^{
+            [login logout];
+
+            [[login.userName should] beNil];
+            [[login.apiKey should] beNil];
+        });
+    });
 });
 
 SPEC_END

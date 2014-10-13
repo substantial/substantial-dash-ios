@@ -24,11 +24,14 @@
     NSString *referer =  [NSString stringWithFormat:@"%@%@", baseUrlString, refererIdentifier];
     [loginRequest addValue:referer forHTTPHeaderField:@"Referer"];
 
+    // Prevent previously logged-in authentication from persisting.
+    [self clearCookies];
+
     NSLog(@"Initiating authentication...");
     [webView loadRequest:loginRequest];
 }
 
-- (BOOL)detectSuccessfulLoginFromRedirectURL:(NSURL *)redirectURL
+- (BOOL)detectSuccessfulLoginWithWebView:(UIWebView *)webView fromRedirectURL:(NSURL *)redirectURL;
 {
     NSString *urlString = [redirectURL absoluteString];
     NSLog(@"detectSuccessfulLoginFromRedirectURL:%@", urlString);
@@ -39,6 +42,8 @@
         login.apiKey = [self decodeQuerystringParam:queryParams[@"api_key"]];
         login.userName = [self decodeQuerystringParam:queryParams[@"user_name"]];
         NSLog(@"user_name => %@, api_key => %@", login.userName, login.apiKey);
+
+        [self loadAboutBlankWithWebView:webView];
         return YES;
     } else {
         return NO;
@@ -49,6 +54,23 @@
 {
     return [[param stringByReplacingOccurrencesOfString:@"+"
                                              withString:@"%20"]  stringByRemovingPercentEncoding];
+}
+
+- (void)clearCookies
+{
+    NSHTTPCookie *cookie;
+    NSHTTPCookieStorage *storage = [NSHTTPCookieStorage sharedHTTPCookieStorage];
+    for (cookie in [storage cookies]) {
+        [storage deleteCookie:cookie];
+    }
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
+- (void)loadAboutBlankWithWebView:(UIWebView *)webView
+{
+    NSURL *aboutBlankUrl = [NSURL URLWithString:@"about:blank"];
+    NSMutableURLRequest *aboutBlankRequest = [NSMutableURLRequest requestWithURL:aboutBlankUrl];
+    [webView loadRequest:aboutBlankRequest];
 }
 
 @end

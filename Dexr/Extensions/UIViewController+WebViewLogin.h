@@ -14,6 +14,6 @@ static NSString *refererIdentifier = @"/-client/ios/login";
 @interface UIViewController (WebViewLogin)
 
 - (void)loadLoginWithWebView:(UIWebView *)webView;
-- (BOOL)detectSuccessfulLoginFromRedirectURL:(NSURL *)redirectURL;
+- (BOOL)detectSuccessfulLoginWithWebView:(UIWebView *)webView fromRedirectURL:(NSURL *)redirectURL;
 
 @end

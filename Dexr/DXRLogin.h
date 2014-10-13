@@ -13,7 +13,10 @@
 @property (copy) NSString *apiKey;
 @property (strong, nonatomic) RACSignal *apiKeyChanged;
 @property (copy) NSString *userName;
+@property (strong, nonatomic) RACSignal *userNameChanged;
 
 + (instancetype)instance;
+
+- (void)logout;
 
 @end
