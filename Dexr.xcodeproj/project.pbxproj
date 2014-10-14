@@ -13,6 +13,8 @@
 		412208A119EC453E002CE6F3 /* CABasicAnimation+NavigationAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 412208A019EC453E002CE6F3 /* CABasicAnimation+NavigationAnimation.m */; };
 		412208A719EC4F7A002CE6F3 /* DXRMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 412208A519EC4F7A002CE6F3 /* DXRMainViewController.m */; };
 		412208A819EC4F7A002CE6F3 /* DXRMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 412208A619EC4F7A002CE6F3 /* DXRMainViewController.xib */; };
+		412208B419EC8AF2002CE6F3 /* DXRBayeuxClientSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 412208B219EC8AF2002CE6F3 /* DXRBayeuxClientSpec.m */; };
+		412208B819EC98A8002CE6F3 /* DXRBayeuxClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 412208B719EC98A8002CE6F3 /* DXRBayeuxClient.m */; };
 		412B5CF819C7B4940090B3ED /* DXREnvironment.m in Sources */ = {isa = PBXBuildFile; fileRef = 412B5CF719C7B4940090B3ED /* DXREnvironment.m */; };
 		412B5CFA19C7B52F0090B3ED /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 412B5CF919C7B52F0090B3ED /* Config.plist */; };
 		412B5CFD19C7C2C50090B3ED /* DXREnvironmentSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 412B5CFC19C7C2C50090B3ED /* DXREnvironmentSpec.m */; };
@@ -56,6 +58,9 @@
 		412208A419EC4F7A002CE6F3 /* DXRMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DXRMainViewController.h; path = Controllers/DXRMainViewController.h; sourceTree = "<group>"; };
 		412208A519EC4F7A002CE6F3 /* DXRMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DXRMainViewController.m; path = Controllers/DXRMainViewController.m; sourceTree = "<group>"; };
 		412208A619EC4F7A002CE6F3 /* DXRMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DXRMainViewController.xib; path = Controllers/DXRMainViewController.xib; sourceTree = "<group>"; };
+		412208B219EC8AF2002CE6F3 /* DXRBayeuxClientSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DXRBayeuxClientSpec.m; path = Lib/DXRBayeuxClientSpec.m; sourceTree = "<group>"; };
+		412208B619EC98A8002CE6F3 /* DXRBayeuxClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DXRBayeuxClient.h; path = Models/DXRBayeuxClient.h; sourceTree = "<group>"; };
+		412208B719EC98A8002CE6F3 /* DXRBayeuxClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DXRBayeuxClient.m; path = Models/DXRBayeuxClient.m; sourceTree = "<group>"; };
 		412B5CF619C7B4940090B3ED /* DXREnvironment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXREnvironment.h; sourceTree = "<group>"; };
 		412B5CF719C7B4940090B3ED /* DXREnvironment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXREnvironment.m; sourceTree = "<group>"; };
 		412B5CF919C7B52F0090B3ED /* Config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
@@ -144,6 +149,8 @@
 				412B5CF719C7B4940090B3ED /* DXREnvironment.m */,
 				4131C19319E3A1B600EAC321 /* DXRLogin.h */,
 				4131C19419E3A1B600EAC321 /* DXRLogin.m */,
+				412208B619EC98A8002CE6F3 /* DXRBayeuxClient.h */,
+				412208B719EC98A8002CE6F3 /* DXRBayeuxClient.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -151,6 +158,7 @@
 		412B5CFB19C7C2510090B3ED /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				412208B219EC8AF2002CE6F3 /* DXRBayeuxClientSpec.m */,
 				4131C19A19E3A24B00EAC321 /* DXRLoginSpec.m */,
 				412B5CFC19C7C2C50090B3ED /* DXREnvironmentSpec.m */,
 			);
@@ -418,6 +426,7 @@
 				418A31A919BE06A200E9D2E1 /* DXRRootViewController.m in Sources */,
 				412B5CF819C7B4940090B3ED /* DXREnvironment.m in Sources */,
 				41163EE319C89EC40082261C /* DXRLoginViewController.m in Sources */,
+				412208B819EC98A8002CE6F3 /* DXRBayeuxClient.m in Sources */,
 				4122089D19E6E284002CE6F3 /* UIViewController+WebViewLogin.m in Sources */,
 				418A316519BBE89800E9D2E1 /* DXRAppDelegate.m in Sources */,
 			);
@@ -427,6 +436,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				412208B419EC8AF2002CE6F3 /* DXRBayeuxClientSpec.m in Sources */,
 				412B5CFD19C7C2C50090B3ED /* DXREnvironmentSpec.m in Sources */,
 				4131C19C19E3A24B00EAC321 /* DXRLoginSpec.m in Sources */,
 			);
